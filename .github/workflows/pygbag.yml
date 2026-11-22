@@ -32,12 +32,12 @@ jobs:
         run: pip install pygbag
 
       - name: Build game
-        run: python -m pygbag --build .
+        run: python -m pygbag --build ./hill-climb-python
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build/web
+          path: hill-climb-python/build/web
 
   deploy:
     environment:
