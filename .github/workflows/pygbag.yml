@@ -28,11 +28,33 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Clean previous build
+        run: rm -rf hill-climb-python/build
+
       - name: Install Pygbag
-        run: pip install pygbag
+        run: pip install pygbag==0.9.3
 
       - name: Build game
+        env:
+          PYTHONUTF8: 1
+          PYTHONIOENCODING: utf-8
         run: python -m pygbag --build ./hill-climb-python
+
+      - name: Remove obsolete BrowserFS reference
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("hill-climb-python/build/web/index.html")
+          html = path.read_text(encoding="utf-8")
+          lines = [
+              line for line in html.splitlines()
+              if "browserfs.min.js" not in line
+          ]
+          path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+          print("BrowserFS reference removed.")
+          PY
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
