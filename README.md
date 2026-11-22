@@ -4,6 +4,7 @@ This is an inspiration of the classic hill climb game, that you all played on yo
 How to play it:
 Download my exe file and run it. 
 The main controls are AD for forwards and backwards. The same goes for the right and left arrow. During climbing you can press escape button for pause menu, where you can restart continue or go to the main menu. 
+In the settings tab you can change the color of your car, change the volume of sounds and music. And turn on or off the music, which means the music in the main menu and the music in the game, when you are climbing are turned off.
 Here is what it looks like:<img width="962" height="629" alt="Snímek obrazovky 2026-11-22 184714" src="https://github.com/user-attachments/assets/2b097d94-86f6-4e4e-90f9-9d3c188b6456" />
 <img width="962" height="627" alt="Snímek obrazovky 2026-11-22 184707" src="https://github.com/user-attachments/assets/d87c6ef4-fe43-4998-841a-fe52dbe58e2e" />
 <img width="956" height="623" alt="Snímek obrazovky 2026-11-22 184659" src="https://github.com/user-attachments/assets/c9da315d-b687-4e06-be39-5ceab487a1f2" />
