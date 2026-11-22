@@ -1189,8 +1189,6 @@ def draw_settings(dt):
 
     draw_button("BACK", back_rect, settings_row == 3)
 
-pygame.mixer.init()
-
 hover_sound = pygame.mixer.Sound("hover.ogg")
 test_song = pygame.mixer.Sound("sounds.ogg")
 boom_audio = pygame.mixer.Sound("boom.ogg")
